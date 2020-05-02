@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+</head>
+<body>
+    <div class="overall-div">
+
+        <!-- instruction div section -->
+        <div class="instruction">
+            <h1 class="instruction-header">INSTRUCTION(S)</h1>
+            <p class="instruction-para">This is a multi choice test that comprises of five questions just to determine the level of your thinking.</p>
+            <p class="instruction-para">Please do not refresh your browser as it will lead to automatic start over.</p>
+            <p class="instruction-para">You are strongly advised to answer all five questions.</p>
+        </div>
+        <!-- END of instruction div section -->
+
+        <div class="record">
+            <p id="record-text">You have not started yet!</p>
+        </div>
+
+        <!-- question section -->
+        <div class="question-con">
+            <h3 class="question-number"></h3>
+            <p class="question">What is the arithmetic mean of the following numbers: 10, 20, 50, 40?</p>
+            <!-- select option -->
+            <div class="option-select">
+                <p class="option"><input class="options" type="radio" name="option-select" value="a"> <em>20</em></p>
+                <p class="option"><input class="options" type="radio" name="option-select" value="b"> <em>30</em></p>
+                <p class="option"><input class="options" type="radio" name="option-select" value="c"> <em>40</em></p>
+                <p class="option"><input class="options" type="radio" name="option-select" value="d"> <em>50</em></p>
+                <p class="option"><input class="options" type="radio" name="option-select" value="d"> <em>None of the above</em></p>
+            </div>
+        </div>
+
+        <div class="question-con">
+            <h3 class="question-number"></h3>
+            <p class="question">What is the sum of the 30<sup>th</sup> term in the series: 1, 3, 5, 7, ...?</p>
+            <!-- select option -->
+            <div class="option-select">
+                <p class="option"><input class="options" type="radio" name="option-select" value="a"> <em>59</em></p>
+                <p class="option"><input class="options" type="radio" name="option-select" value="b"> <em>-59</em></p>
+                <p class="option"><input class="options" type="radio" name="option-select" value="c"> <em>69</em></p>
+                <p class="option"><input class="options" type="radio" name="option-select" value="d"> <em>-69</em></p>
+                <p class="option"><input class="options" type="radio" name="option-select" value="d"> <em>None of the above</em></p>
+            </div>
+        </div>
+
+        <div class="question-con">
+            <h3 class="question-number"></h3>
+            <p class="question">How many colors does Nigeria flag has?</p>
+            <!-- select option -->
+            <div class="option-select">
+                <p class="option"><input class="options" type="radio" name="option-select" value="a"> <em>1</em></p>
+                <p class="option"><input class="options" type="radio" name="option-select" value="b"> <em>2</em></p>
+                <p class="option"><input class="options" type="radio" name="option-select" value="c"> <em>3</em></p>
+                <p class="option"><input class="options" type="radio" name="option-select" value="d"> <em>4</em></p>
+                <p class="option"><input class="options" type="radio" name="option-select" value="d"> <em>None of the above</em></p>
+            </div>
+        </div>
+
+        <div class="question-con">
+            <h3 class="question-number"></h3>
+            <p class="question">What is the missing number? 
+                <img class="image" src="images/image1.jpg" alt="Image File">
+            </p>
+            <!-- select option -->
+            <div class="option-select">
+                <p class="option"><input class="options" type="radio" name="option-select" value="a"> <em>7</em></p>
+                <p class="option"><input class="options" type="radio" name="option-select" value="b"> <em>22</em></p>
+                <p class="option"><input class="options" type="radio" name="option-select" value="c"> <em>4</em></p>
+                <p class="option"><input class="options" type="radio" name="option-select" value="d"> <em>2</em></p>
+                <p class="option"><input class="options" type="radio" name="option-select" value="d"> <em>None of the above</em></p>
+            </div>
+        </div>
+
+        <div class="question-con">
+            <h3 class="question-number"></h3>
+            <p class="question">Given console.log("2" + 1), What will be logged to the console?</p>
+            <!-- select option -->
+            <div class="option-select">
+                <p class="option"><input class="options" type="radio" name="option-select" value="a"> <em>3</em></p>
+                <p class="option"><input class="options" type="radio" name="option-select" value="b"> <em>Undefined</em></p>
+                <p class="option"><input class="options" type="radio" name="option-select" value="c"> <em>Error</em></p>
+                <p class="option"><input class="options" type="radio" name="option-select" value="d"> <em>21</em></p>
+                <p class="option"><input class="options" type="radio" name="option-select" value="d"> <em>None of the above</em></p>
+            </div>
+        </div>
+        <!-- END of question section -->
+
+        <!-- next button -->
+        <div class="button-con">
+            <button id="next" onclick="nextQuestion()" type="submit">Click here to start!</button>
+        </div>
+        <!-- END of next button -->
+
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

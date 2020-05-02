@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* background-color: teal; */
+}
+.overall-div{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* instruction div section */
+.instruction{
+    padding: 20px 40px;
+    /* background-color: #FFAB00; */
+    /* background-color: #3E4095; */
+    text-align: center;
+}
+.instruction-header{
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.instruction-para{
+    margin-top: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* END of instruction div section */
+
+
+/* record div */
+#record-text{
+    padding: 20px 40px;
+    text-align: center;
+}
+/* END of record div */
+
+
+/* question section */
+    .question-con{
+        padding: 20px 40px;
+        /* background-color: rgba(255, 170, 0, 0.596); */
+    }
+    .question-number, .question{
+        padding: 10px 0;
+    }
+    .image{
+        display: block;
+        width: 200px;
+        height: auto;
+    }
+    .option{
+        padding: 10px;
+    }
+/* END of question section */
+
+.button-con{
+    text-align: center;
+}
+#next{
+    background-color: rgb(2, 43, 2);
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+@media all and (min-width:786px){
+    #record-text{
+        text-align: right;
+    }
+}
