@@ -38,11 +38,11 @@ body{
 
 
 /* question section */
-    .question-con{
+    #question-con{
         padding: 20px 40px;
-        /* background-color: rgba(255, 170, 0, 0.596); */
+        display: none;
     }
-    .question-number, .question{
+    #question-number, #question{
         padding: 10px 0;
     }
     .image{
