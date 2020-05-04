@@ -52,19 +52,27 @@ body{
     }
     .option{
         padding: 10px;
+        color: red;
+    }
+    .options{
+        cursor: pointer;
     }
 /* END of question section */
+
 
 .button-con{
     text-align: center;
 }
 #next{
-    background-color: rgb(2, 43, 2);
+    background-color: rgb(4, 112, 4);
     color: #fff;
     font-weight: 700;
     padding: 10px 20px;
     margin: 10px 0;
     border-radius: 5px;
+}
+#next:hover{
+    background-color: rgb(3, 88, 3);
 }
 
 @media all and (min-width:786px){

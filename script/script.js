@@ -16,12 +16,12 @@ var questionBank = [
     ["What is the missing number?", "72", "22", "4", "2", "None of the above"],
     ["What is", "72", "22", "4", "2", "None of the above"],
 ]
+var myAnswers = ["c", "b", "a", "d", "d"];
 
 var myQuestion = document.getElementById("question"); //this
 var paraOption = document.getElementsByClassName("option")
 var optionSelected = document.getElementsByClassName("options");
 var myOption = document.getElementsByClassName("option-value");
-
 
 var questionWord = {
     0: "zero",
@@ -38,10 +38,10 @@ recordText.innerHTML = "You have not started yet!";
 questionCon.style.display = "none";
 
 
+
 // function that records total number of question answered
 function questionCounter(){
     myCounter++;
-    // console.log(myCounter);
     return myCounter;
 }
 //(END of function that records total number of question answered
@@ -49,27 +49,27 @@ function questionCounter(){
 
 // function that determines correct or wrong answer
 function correctAnswer(c){
-    if(myCounter == 0 && c.value == "c"){
-        // paraOption[2].style.backgroundColor = "Green";
-        myScore[myCounter] = 1;
-    } else if(myCounter == 1 && c.value == "b"){
-        // paraOption[1].style.backgroundColor = "Green";
-        myScore[myCounter] = 1;
-    } else if(myCounter == 2 && c.value == "a"){
-        // paraOption[0].style.backgroundColor = "Green";
-        myScore[myCounter] = 1;
-    } else if(myCounter == 3 && c.value == "d"){
-        // paraOption[3].style.backgroundColor = "Green";
-        myScore[myCounter] = 1;
-    } else if(myCounter == 4 && c.value == "d"){
-        // paraOption[3].style.backgroundColor = "Green";
-        myScore[myCounter] = 1;
-    } else{
-        // paraOption[i].style.backgroundColor = "Red";
-        myScore[myCounter] = 0;
-    }
-    console.log(myScore); 
+        
+        if(c.value == myAnswers[myCounter]){
+            backgroundReset();
+            c.parentElement.style.backgroundColor = "green";
+            c.parentElement.style.color = "white";
+            myScore[myCounter] = 1;
+        } else{
+            backgroundReset();
+            c.parentElement.style.backgroundColor = "red";
+            c.parentElement.style.color = "white";
+            myScore[myCounter] = 0;
+        }
+
+    console.log(myScore);
 }
+
+function myNullOption(){
+    myScore[myCounter] = 0;
+    console.log(myScore);
+}
+
 //END of function that determines correct or wrong answer
 
 
@@ -83,21 +83,32 @@ function calResult(){
 // END of Function that calculates the score
 // if(myCounter == 0 && c.select && c.value == "c")
 
+
+//Function that makes all the paraOption to have no background
 function backgroundReset(){
     for(var i of paraOption){
-        i.style.backgroundColor = "none";
+        i.style.backgroundColor = "";
+        i.style.color = "black";
     }
 }
+//END of Function that makes all the paraOption to have no background
 
 
 // function for nexting question
 function nextQuestion(){
     nextButton.innerHTML = "Next";
+   
+
+    // CALLS the Function that makes all the paraOption to have no background
+    backgroundReset()
+    //END of Function that makes all the paraOption to have no background
 
     // calls the function that records total number of question answered
     questionCounter();
     // END of function that records total number of question answered
+
     if(myCounter <= 4){
+
         recordText.innerHTML = "You have answered " + questionWord[myCounter] + " " + (myCounter) + " question(s) out of five(5) questons";
         questionCon.style.display = "block";
         questionNumber.innerHTML = "Question " + (myCounter + 1);
