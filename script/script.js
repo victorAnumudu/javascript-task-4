@@ -151,7 +151,7 @@ function nextQuestion(){
 
         recordText[0].innerHTML = "you have gotten " + calResult() + " answer(s) correctly!";
 
-        recordText[1].innerHTML = "and have answered " + questionWord[myCounter] + " " + (myCounter) + " question(s) out of five(5) questions";
+        recordText[1].innerHTML = "and you're in question number " + questionWord[myCounter + 1] + " " + "(" + (myCounter + 1) + ")" + " out of five(5) questions";
         
         questionCon.style.display = "block";
         questionNumber.innerHTML = "Question " + (myCounter + 1);
@@ -164,7 +164,7 @@ function nextQuestion(){
         // END of option-value
 
     } else if(myCounter == 5){
-        recordText.innerHTML = "You have answered " + questionWord[myCounter] + " " + (myCounter) + " question(s) out of five(5) questons";
+        recordText[1].innerHTML = "You've answered all the question, click on check result to see your grade!";
         questionCon.style.display = "none";
         nextButton.innerHTML = "Check Result";
     } else{
@@ -176,7 +176,6 @@ function nextQuestion(){
     }
 }
 //END of function for nexting question
-
 
 
 
