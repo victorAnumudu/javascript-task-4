@@ -53,6 +53,7 @@ body{
     .option{
         padding: 10px;
         color: red;
+        margin: 10px 0;
     }
     .options{
         cursor: pointer;
