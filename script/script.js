@@ -21,6 +21,7 @@ var paraOption = document.getElementsByClassName("option")
 var optionSelected = document.getElementsByClassName("options");
 var myOption = document.getElementsByClassName("option-value");
 
+
 var questionWord = {
     0: "zero",
     1: "one",
@@ -73,7 +74,6 @@ function activateOption(){
 
 // function that determines correct or wrong answer
 function correctAnswer(c){
-     
     if(c.value == myAnswers[myCounter]){
         backgroundReset();
         deactivateOption();
@@ -81,40 +81,19 @@ function correctAnswer(c){
         c.parentElement.style.color = "white";
         myScore.push(1);
     } else{
+        var rightAnswer = myAnswers[myCounter];
         backgroundReset();
         deactivateOption();
-        
-
-        for(var i of paraOption){
-            if(myCounter == 0){
-                paraOption[2].style.backgroundColor = "green";
-                paraOption[2].style.color = "white";
-            } else if(myCounter == 1){
-                paraOption[1].style.backgroundColor = "green";
-                paraOption[1].style.color = "white";
-            } else if(myCounter == 2){
-                paraOption[0].style.backgroundColor = "green";
-                paraOption[0].style.color = "white";
-            } else if(myCounter == 3){
-                paraOption[3].style.backgroundColor = "green";
-                paraOption[3].style.color = "white";
-            } else if(myCounter == 4){
-                paraOption[3].style.backgroundColor = "green";
-                paraOption[3].style.color = "white";
+        c.parentElement.style.backgroundColor = "red";
+        for(var i = 0; i < optionSelected.length; i++){
+            if(optionSelected[i].value == rightAnswer){
+                optionSelected[i].parentElement.style.backgroundColor = "green";
             }
         }
-
-
-        c.parentElement.style.backgroundColor = "red";
-        c.parentElement.style.color = "white";
-        myScore.push(0);
     }
-
     recordText[0].innerHTML = "you have gotten " + calResult() + " answer(s) correctly!";
     recordText[1].innerHTML = "and have answered " + questionWord[myCounter + 1] + " " + (myCounter + 1) + " question(s) out of five(5) questions";
 }
-
-
 //END of function that determines correct or wrong answer
 
 
